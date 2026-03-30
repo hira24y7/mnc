@@ -18,74 +18,85 @@ animation:blink 2s infinite;
 0%,50%,100% {opacity:1;}
 25%, 75% {opacity: 0;}
 }
+ table, th, tr{
+border:1px solid black;
+    border-collapse: collapse;
+ font-size:25px;
+padding : 10px;
+margin:auto;
+
+}
+td{
+border:1px solid black;
+    border-collapse: collapse;
+ font-size:25px;
+padding : 10px;
+text-align:center;
+}
 </style>
- <div class="header-a"> 1st Solo quiz Competition performance Chart (07 Jan 2026) <a href="q1.jpg"> <font color = "yellow"> Click me</font></a></div>
-<table border="1" cellpadding ="10" cellspacing ="0" width="75%" style="margin:auto;" >
-    <tr style="font-size:30px;">
-        <th>Name</th>
-        <th>Quiz marks</th>
-        <th>Hot Seat marks</th>
-<th> Rank position </th>
-    </tr>
+
+<div class="header-a">
+<a> Project -  Create Web page use only HTML<a>
+</div>
+<table>
+<caption> SPM College all students projects </caption>
+<tr >
+<th  rowspan="2" > Roll No </th>
+<th  rowspan="2"> Name </th> 
+<th>Calendar</th>
+<th> Final Project </th>  
+</tr>
+<tr>
+<script>
+let names= [
+  {name: "  ", cal: "c1.html", proj: "p1.html"},
+  {name: "Vishal Kumar", cal: "c2.html", proj: "p2.html"},
+  {name: "Rakesh kumar", cal: "c3.html", proj: "p3.html"},
+{name: "Govind Chauhan", cal: "c3.html", proj: "p3.html"},
+{name: "Ankit Verma", cal: "c3.html", proj: "p3.html"},
+{name: "Sagar Kumar", cal: "c3.html", proj: "p3.html"},
+{name: "Rishav Dev", cal: "c3.html", proj: "p3.html"},
+{name: "Sudhanshu kumar", cal: "c3.html", proj: "p3.html"},
+{name: "Sumit kumar", cal: "csumit.html", proj: "sumit.html"},
+{name: "Rahul kumar", cal: "c3.html", proj: "p3.html"},
+{name: "Rudra pratap", cal: "c3.html", proj: "p3.html"},
+{name: "  ", cal: "c3.html", proj: "p3.html"},
+{name: "Rahul verma", cal: "c3.html", proj: "p3.html"},
+{name: "vikash kumar", cal: "c3.html", proj: "p3.html"},
+{name: "rohit patel", cal: "c3.html", proj: "p3.html"},
+{name: "jaydeep kumar", cal: "c3.html", proj: "p3.html"},
+{name: "appu kumar", cal: "c3.html", proj: "p3.html"},
+{name: "aditya kumar", cal: "c3.html", proj: "p3.html"},
+{name: "amit kumar", cal: "c3.html", proj: "p3.html"},
+{name: "ravi raj", cal: "c3.html", proj: "p3.html"},
+{name: "sonal raj", cal: "c3.html", proj: "p3.html"},
+{name: "aditya kumar", cal: "c3.html", proj: "p3.html"},
+{name: "suraj kumar", cal: "c3.html", proj: "p3.html"},
+{name: "Manish kumar", cal: "c3.html", proj: "p3.html"},
+{name: "Sonu kumar", cal: "c3.html", proj: "p3.html"},
+{name: "manish raj", cal: "c3.html", proj: "p3.html"},
+{name: "Shivam kumar", cal: "c3.html", proj: "p3.html"},
+{name: "sonu kumar", cal: "c3.html", proj: "p3.html"},
+{name: "aman krishana", cal: "c3.html", proj: "p3.html"},
+{name: "sohani kumari", cal: "c3.html", proj: "p3.html"},
+{name: "dhiraj kumar", cal: "c3.html", proj: "p3.html"},
+
+
+];
+
+for(let i=0; i<names.length; i++){
+  document.write(`
     <tr>
-        <td>Rohit Patel</td>
-        <td>5/16</td>
-        <td>2/7</td>
-<td>5th </td>
+      <td>${i+1}</td>
+      <td>${names[i].name}</td>
+      <td><a href="${names[i].cal}" target="_blank">Open</a></td>
+      <td><a href="${names[i].proj}" target="_blank">Open</a></td>
     </tr>
-    <tr>
-        <td>Vikash Kumar</td>
-        <td>9/16</td>
-        <td>6/9</td>
-<td>3rd </td>
-    </tr>
-<tr>
-        <td>Aman Krishna</td>
-        <td>9/15</td>
-        <td>9/9</td>
-<td>3rd </td>
-    </tr>
-<tr>
-        <td>Manish kumar</td>
-        <td>10/16</td>
-        <td>5/6</td>
-<td>2nd </td>
-    </tr>
-<tr>
-        <td>Rahul Kumar</td>
-        <td>7/15</td>
-        <td>5/7</td>
-<td>4th </td>
-    </tr>
-<tr>
-        <td>Ravi Raj</td>
-        <td>5/16</td>
-        <td>4/5</td>
-<td>5th </td>
-    </tr>
-<tr>
-        <td>Manish Raj</td>
-        <td>7/16</td>
-        <td>9/10</td>
-<td>4th </td>
-    </tr>
-<tr>
-        <td>Rahul Verma</td>
-        <td>11/16</td>
-        <td>8/9</td>
-<td>1st &nbsp; &nbsp; &nbsp; <span class="emoji"> &#9989;</span></td>
-    </tr>
-</table>
-            <a href="html-1.pdf">h1</a>
-             <a href="html-2.pdf">h2</a>
-             <a href="html-3.pdf">h3</a>
-             <a href="html-4.pdf">h4</a>
-             <a href="html-5.pdf">h5</a>
-             <a href="css-1.pdf">c1</a>
-             <a href="css-2.pdf">c2</a>
-             
-            
+  `);
+}
+</script>
+</tr>
+
             
 </body>
 </html>
-
