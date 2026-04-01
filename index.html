@@ -14,7 +14,7 @@
 .emoji{
 animation:blink 2s infinite;
 }
-@keyfranes blink {
+@keyframes blink {
 0%,50%,100% {opacity:1;}
 25%, 75% {opacity: 0;}
 }
@@ -47,7 +47,7 @@ text-align:center;
 <th> Final Project </th>  
 </tr>
 <tr>
-<script>
+/*<script>
 let names= [
   {name: "  ", cal: "c1.html", proj: "p1.html"},
   {name: "Vishal Kumar", cal: "c2.html", proj: "p2.html"},
@@ -94,6 +94,58 @@ for(let i=0; i<names.length; i++){
     </tr>
   `);
 }
+</script>*/
+<tbody id="tableData"></tbody>
+
+<script>
+let names = [
+  {name: "", cal: "c1.html", proj: "p1.html"},
+  {name: "Vishal Kumar", cal: "c2.html", proj: "p2.html"},
+  {name: "Rakesh kumar", cal: "c3.html", proj: "p3.html"},
+  {name: "Govind Chauhan", cal: "c3.html", proj: "p3.html"},
+  {name: "Ankit Verma", cal: "c3.html", proj: "p3.html"},
+  {name: "Sagar Kumar", cal: "c3.html", proj: "p3.html"},
+  {name: "Rishav Dev", cal: "c3.html", proj: "p3.html"},
+  {name: "Sudhanshu kumar", cal: "c3.html", proj: "p3.html"},
+  {name: "Sumit kumar", cal: "csumit.html", proj: "sumit.html"},
+  {name: "Rahul kumar", cal: "c3.html", proj: "p3.html"},
+  {name: "Rudra pratap", cal: "c3.html", proj: "p3.html"},
+  {name: "", cal: "c3.html", proj: "p3.html"},
+  {name: "Rahul verma", cal: "c3.html", proj: "p3.html"},
+  {name: "vikash kumar", cal: "c3.html", proj: "p3.html"},
+  {name: "rohit patel", cal: "c3.html", proj: "p3.html"},
+  {name: "jaydeep kumar", cal: "c3.html", proj: "p3.html"},
+  {name: "appu kumar", cal: "c3.html", proj: "p3.html"},
+  {name: "aditya kumar", cal: "c3.html", proj: "p3.html"},
+  {name: "amit kumar", cal: "c3.html", proj: "p3.html"},
+  {name: "ravi raj", cal: "c3.html", proj: "p3.html"},
+  {name: "sonal raj", cal: "c3.html", proj: "p3.html"},
+  {name: "aditya kumar", cal: "c3.html", proj: "p3.html"},
+  {name: "suraj kumar", cal: "c3.html", proj: "p3.html"},
+  {name: "Manish kumar", cal: "c3.html", proj: "p3.html"},
+  {name: "Sonu kumar", cal: "c3.html", proj: "p3.html"},
+  {name: "manish raj", cal: "c3.html", proj: "p3.html"},
+  {name: "Shivam kumar", cal: "c3.html", proj: "p3.html"},
+  {name: "sonu kumar", cal: "c3.html", proj: "p3.html"},
+  {name: "aman krishana", cal: "c3.html", proj: "p3.html"},
+  {name: "sohani kumari", cal: "c3.html", proj: "p3.html"},
+  {name: "dhiraj kumar", cal: "c3.html", proj: "p3.html"}
+];
+
+let output = "";
+
+for (let i = 0; i < names.length; i++) {
+  output += `
+    <tr>
+      <td>${i + 1}</td>
+      <td>${names[i].name || "-"}</td>
+      <td><a href="${names[i].cal}" target="_blank" rel="noopener noreferrer">Open</a></td>
+      <td><a href="${names[i].proj}" target="_blank" rel="noopener noreferrer">Open</a></td>
+    </tr>
+  `;
+}
+
+document.getElementById("tableData").innerHTML = output;
 </script>
 </tr>
 
